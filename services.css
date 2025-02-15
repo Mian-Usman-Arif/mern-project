@@ -1,0 +1,83 @@
+/* Default styling for larger screens */
+.services-section {
+  position: relative; /* Allows overlay positioning */
+  background-image: url("/html/images/yachtcharter1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center; /* Center the background image */
+  color: white;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-family: "Faculty Glyphic", sans-serif;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  width: 100%; /* Ensure the section fills the viewport */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Background overlay */
+.services-section::before {
+  content: "";
+  position: absolute; /* Covers the entire section */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1; /* Ensures it sits below the text */
+}
+
+/* Ensure text is above the overlay */
+.services-section h1,
+.services-section p {
+  position: relative;
+  z-index: 2; /* Renders above the overlay */
+}
+
+.services-section h1 {
+  font-size: calc(2rem + 1vw);
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.services-section p {
+  font-size: calc(1rem + 0.5vw);
+  margin-top: 10px;
+}
+
+/* Mobile view adjustments (max-width: 576px) */
+@media (max-width: 576px) {
+  .services-section {
+    background-size: cover; /* Ensure the image covers the section fully */
+    background-position: center;
+    height: 10vh; /* Allow content to determine the height */
+    padding: 20px;
+    width: 100%; /* Prevent overflow on narrow screens */
+  }
+
+  .services-section h1 {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
+  .services-section p {
+    font-size: 0.9rem; /* Adjust paragraph size for mobile */
+  }
+}
+
+@media (max-width: 580px) {
+  .header {
+    background-color: black !important; /* Ensures the background becomes black */
+  }
+
+  /* Optional: Adjust text color if necessary */
+  .header .nav-link,
+  .header .top-bar__item,
+  .header .header-main__link {
+    color: #fff !important; /* Ensures text is visible on black background */
+  }
+}

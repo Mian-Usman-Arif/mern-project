@@ -1,0 +1,573 @@
+
+body{
+    font-family: "Faculty Glyphic", sans-serif; /* Apply Montserrat font */
+    margin: 0;
+}/* Default styling for larger screens */
+.services-section {
+  position: relative; /* Allows overlay positioning */
+  background-image: url("/html/images/yachtcharter1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center; /* Center the background image */
+  color: white;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-family: "Faculty Glyphic", sans-serif;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  width: 100%; /* Ensure the section fills the viewport */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Background overlay */
+.services-section::before {
+  content: "";
+  position: absolute; /* Covers the entire section */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1; /* Ensures it sits below the text */
+}
+
+/* Ensure text is above the overlay */
+.services-section h1,
+.services-section p {
+  position: relative;
+  z-index: 2; /* Renders above the overlay */
+}
+
+.services-section h1 {
+  font-size: calc(2rem + 1vw);
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.services-section p {
+  font-size: calc(1rem + 0.5vw);
+  margin-top: 10px;
+}
+
+/* Mobile view adjustments (max-width: 576px) */
+@media (max-width: 576px) {
+  .services-section {
+    background-size: cover; /* Ensure the image covers the section fully */
+    background-position: center;
+    height: auto; /* Allow content to determine the height */
+    padding: 20px;
+    margin-top: 40px;
+    width: 100%; /* Prevent overflow on narrow screens */
+  }
+
+  .services-section h1 {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
+  .services-section p {
+    font-size: 0.9rem; /* Adjust paragraph size for mobile */
+  }
+}
+
+/* Mobile view adjustments (max-width: 576px) */
+@media (max-width: 576px) {
+  .services-section {
+    background-size: cover; /* Ensure the image covers the section fully */
+    background-position: center;
+    height: auto; /* Allow content to determine the height */
+    padding: 20px;
+    width: 100%; /* Prevent overflow on narrow screens */
+  }
+
+  .services-section h1 {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
+  .services-section p {
+    font-size: 0.9rem; /* Adjust paragraph size for mobile */
+  }
+}
+
+/* Styling for the Section */
+.image-carousel-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Styling for the Title */
+.carousel-title {
+  font-size: 4rem;
+  margin: 20px 0;
+  color: #402D21;
+}
+
+/* Slider Styling */
+.slider {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: auto !important; /* Let the height adjust automatically */
+}
+
+/* Images in the Slider */
+.sp-image {
+  width: 100%; /* Ensure the image spans the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Fit image inside the container without cropping */
+  object-position: center; /* Center the image */
+}
+
+
+/* Styling for Image Numbers */
+#current-image,
+#total-images {
+  font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-title {
+      font-size: 2rem; /* Smaller title on smaller screens */
+  }
+
+  #current-image,
+  #total-images {
+      font-size: 1rem;
+  }
+
+  .slider {
+      height: 400px; /* Adjust slider height for mobile */
+  }
+
+  .sp-image {
+      object-fit: contain; /* Prevent excessive cropping on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+      height: 300px; /* Further adjust height for very small screens */
+  }
+}
+
+
+  #gal-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0;
+  }
+  .headings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0px;
+    text-align: center;
+  }
+  
+  .headings h6 {
+    margin-bottom: 10px;
+  }
+  
+  .headings h1 {
+    font-family: "Faculty Glyphic", serif;
+    color: #bb9b64;
+    font-size: 80px; /* Default size for large screens */
+  }
+  
+  /* Responsive styles for medium screens */
+  @media (max-width: 768px) {
+    .headings h1 {
+      font-size: 50px; /* Adjust font size for tablets */
+    }
+  }
+  
+  /* Responsive styles for small screens */
+  @media (max-width: 480px) {
+    .headings{
+      margin: 40px 0px;
+    }
+    .headings h1 {
+      font-size: 35px; /* Adjust font size for mobile devices */
+    }
+  }
+  
+
+  .mcgc{
+    margin: 60px
+  }
+  .mcgc div{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .mcgc div h1{
+    font-size: 70px;
+    font-family: "Faculty Glyphic", serif;
+    color: #402D21;
+  }
+  .mcgc div h2{
+    font-size: 50px;
+     font-family: "Faculty Glyphic", serif;
+    color: #bb9b64af;
+  }
+
+  .textside{
+    font-family: "Faculty Glyphic", serif;
+    color: #402D21;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+  }
+  .textside h1,.textside h4{
+    font-family: "Faculty Glyphic", serif;
+    color: #402D21;
+  }
+
+  .contents{
+    margin: 40px 0px;
+  }
+  .contents div{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+
+ /* General styles for the list section */
+.list-section {
+  color: black;
+}
+
+/* Wrapper for horizontal scrolling */
+.category-nav-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd; /* Optional: Adds a separator below the nav */
+  padding-bottom: 10px; /* Optional: Adds padding below the nav */
+}
+
+/* Navigation container */
+.category-nav {
+  display: inline-flex; /* Ensures items are in a single row */
+  gap: 1rem; /* Adds spacing between items */
+}
+
+/* Individual navigation items */
+.category-item {
+  flex-shrink: 0; /* Prevents items from shrinking on small screens */
+  white-space: nowrap; /* Prevents text from wrapping */
+  position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.category-item:hover,
+.category-item.active {
+  color: #bb9b64;
+  text-decoration: underline;
+}
+
+/* Horizontal line style */
+hr {
+  border: 1px solid #bbb;
+}
+
+/* Data display styles */
+.category-row {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.category-heading {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.category-description {
+  color: #555;
+}
+
+/* Responsive image styles */
+.category-row img {
+  width: 100%;
+  max-width: 320px; /* Limits the maximum width to the image's natural size */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: cover; /* Ensures proper fitting inside the container */
+  border: 1px solid #ddd; /* Optional: Adds a border around the image */
+  border-radius: 5px; /* Optional: Slightly rounded corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .category-nav {
+    justify-content: flex-start; /* Left-align items on smaller screens */
+  }
+
+  .category-item {
+    font-size: 0.9rem; /* Reduce font size for better fit on smaller screens */
+  }
+}
+
+ /* General Styles */
+.activity-carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.cards-wrapper {
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling outside the container */
+}
+
+.cards {
+  display: flex;
+  gap: 1rem; /* Ensures the gap between cards is respected */
+  transition: transform 0.3s ease;
+  justify-content: flex-start; /* Ensures no extra space before the cards */
+}
+
+/* Card Styles */
+.card {
+  flex: 0 0 calc(33.33% - 1rem); /* Default: 3 cards visible */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0; /* Remove extra padding */
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex; /* Ensures the height is controlled by the content */
+  flex-direction: column;
+  justify-content: space-between; /* Makes the content spread vertically */
+}
+
+.card-img {
+  
+  width: 100%; /* Ensure image takes up the full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 300px; /* Set max width to 300px */
+  margin: 0 auto 1rem; /* Centers the image and adds margin-bottom */
+  margin-top: 10px;
+  object-fit: cover;
+}
+
+/* Carousel Arrow Styles */
+.carousel-arrow {
+  background-color: #bb9b64;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  display: flex;
+  visibility: visible !important;
+  opacity: 1 !important;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .card {
+    flex: 0 0 calc(50% - 1rem); /* 2 cards visible on medium screens */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .card {
+    flex: 0 0 100%; /* 1 card visible on small screens */
+  }
+}
+/* experiences */
+
+.experiences{
+  background-color: black;
+  padding: 60px 0;
+}
+/* black headings */
+.bheadings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0px;
+  text-align: center;
+}
+
+.bheadings h6 {
+  margin-bottom: 10px;
+  color: #bb9b64;
+}
+
+.bheadings h1 {
+  font-family: "Faculty Glyphic", serif;
+  color: white;
+  font-size: 80px; /* Default size for large screens */
+}
+
+/* Responsive styles for medium screens */
+@media (max-width: 768px) {
+  .bheadings h1 {
+    font-size: 50px; /* Adjust font size for tablets */
+  }
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 480px) {
+  .bheadings h1 {
+    font-size: 35px; /* Adjust font size for mobile devices */
+  }
+}
+
+.exp div{
+  padding: 20px; 
+  display: flex;
+  align-items: center;
+}
+
+.exp h1{
+  font-family: "Faculty Glyphic", serif;
+  color: white;
+  font-size: 24px;
+ 
+}
+.exp h6{
+  color: #bb9b64;
+  margin-left: 15px;
+  font-size: 12px;
+}
+
+
+/* Responsive styles for medium screens */
+@media (max-width: 768px) {
+  .exp h1 {
+    font-size: 40px; /* Adjust font size for tablets */
+  }
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 480px) {
+  .exp h1 {
+    font-size: 30px; /* Adjust font size for mobile devices */
+  }
+}
+
+.headings P{
+  width: 500px;
+  margin: 20px 0;
+}
+@media (max-width: 480px) {
+  .headings p {
+    width: 350px ;
+  }
+}
+  /* animation for dw  */
+  @keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.dw-img, .dw-info {
+    opacity: 0; /* Initially hidden */
+    animation-duration: 1s;
+    animation-fill-mode: forwards; /* Stay in final state after animation */
+}
+/* animate dw */
+/* Slide in from left for text content */
+.dw-info.slide-in-left {
+    animation-name: slideInFromLeft;
+}
+
+/* Slide in from right for image content */
+.dw-img.slide-in-right {
+    animation-name: slideInFromRight;
+}
+
+/* animation for service section */
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to elements */
+.services-section h1, 
+.services-section p {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+}
+
+/* Delays for sequential animation */
+.services-section h1 {
+  animation-delay: 0.5s; /* Heading fades in first */
+}
+
+.services-section p {
+  animation-delay: 1s; /* Paragraph fades in after heading */
+}
+
+
+@media (max-width: 580px) {
+  .header {
+    background-color: black !important; /* Ensures the background becomes black */
+  }
+
+  /* Optional: Adjust text color if necessary */
+  .header .nav-link,
+  .header .top-bar__item,
+  .header .header-main__link {
+    color: #fff !important; /* Ensures text is visible on black background */
+  }
+}
